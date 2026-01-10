@@ -11,6 +11,7 @@ from routes.predictions import router as predictions_router
 from routes.voice import router as voice_router
 from routes.behavioral import router as behavioral_router
 from routes.clinician import router as clinician_router
+from routes.health import router as health_router
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -35,6 +36,7 @@ app.include_router(predictions_router)
 app.include_router(voice_router)
 app.include_router(behavioral_router)
 app.include_router(clinician_router)
+app.include_router(health_router)
 
 # Serve uploaded files
 if os.path.exists(settings.UPLOAD_DIR):
