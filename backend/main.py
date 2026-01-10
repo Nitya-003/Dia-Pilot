@@ -6,6 +6,11 @@ import os
 from config import settings
 from database import init_db
 from routes.meals import router as meals_router
+from routes.glucose import router as glucose_router
+from routes.predictions import router as predictions_router
+from routes.voice import router as voice_router
+from routes.behavioral import router as behavioral_router
+from routes.clinician import router as clinician_router
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -25,6 +30,11 @@ app.add_middleware(
 
 # Include routers
 app.include_router(meals_router)
+app.include_router(glucose_router)
+app.include_router(predictions_router)
+app.include_router(voice_router)
+app.include_router(behavioral_router)
+app.include_router(clinician_router)
 
 # Serve uploaded files
 if os.path.exists(settings.UPLOAD_DIR):
