@@ -1,91 +1,61 @@
-# 🩺 Dia-Pilot
-**Proactive AI Ecosystem for Diabetes Management**
+# Dia-Pilot 🚑🤖
+### Proactive AI-Powered Diabetes Management Platform
 
-> Transitioning diabetes care from manual tracking to predictive, automated guidance.
-
----
-
-## Problem Statement
-Diabetes management today is largely reactive:
-- Manual glucose tracking is time-consuming and error-prone
-- Patients receive alerts after glucose events occur
-- Clinicians face data overload with limited actionable insight
-
-This results in preventable hypoglycemic events, burnout, and long-term complications.
+Dia-Pilot is a proactive, AI-driven diabetes management ecosystem built to shift healthcare from reactive monitoring to predictive guidance. The backend is a high-performance **Python** implementation hosted on **Microsoft Azure**, ensuring scalability, security, and clinical reliability.
 
 ---
 
-## Solution Overview
-**Dia-Pilot** is a proactive AI-driven ecosystem designed to predict, prevent, and guide diabetes management before emergencies occur.
+## 🏗️ System Architecture
 
-The platform emphasizes:
-- Prevention over correction  
-- Zero-effort patient interaction  
-- Clinically actionable summaries for healthcare providers  
-
----
-
-## Key Features
-
-### 1. Predictive Engine (The Forecast)
-- **Glycemic Simulator**  
-  What-if simulation to predict glucose response before meals or exercise.
-- **Crash Guard**  
-  Early hypoglycemia alerts (~20 minutes ahead) using multi-sensor fusion  
-  *(CGM + heart rate + skin temperature)*.
-
----
-
-### 2. Frictionless Input (Zero-Effort Logging)
-- **Snap & Sync**  
-  AI vision-based meal logging from a single photo.
-- **Voice Intercom**  
-  Natural language, hands-free logging.
-
----
-
-### 3. Behavioral Intelligence (The Nudge)
-- **Contextual Coaching**  
-  Personalized nudges based on historical glucose behavior.
-- **Glucose Twins**  
-  Peer-to-peer strategy sharing with metabolically similar users.
-
----
-
-### 4. Provider Bridge (Clinical ROI)
-- **Executive Summary**  
-  One-page clinical report condensing weeks of patient data.
-- **Triage Portal**  
-  Early risk detection and patient prioritization for medical teams.
-
----
-
-## Conceptual Architecture
+Our cloud-native architecture leverages Python-based Azure Functions to orchestrate AI services and patient data in real-time.
 
 ```mermaid
 graph TD
-    A[Patient Inputs] --> B[Predictive Engine]
+    subgraph "Frontend (React.js)"
+        A[Patient Dashboard] -->|API Requests| B[REST API Gateway]
+        A2[Clinician Portal] -->|Data Visualization| B
+    end
 
-    B --> C[Glycemic Simulator]
-    B --> D[Crash Guard]
+    subgraph "Backend (Python)"
+        B --> C{FastAPI / Flask}
+        C -->|Data Processing| D[Predictive AI Models]
+        C -->|NLP / Voice| E[Speech Processing]
+        C -->|Computer Vision| F[Image Recognition]
+    end
 
-    A --> E[Frictionless Input Layer]
-    E --> F[Snap & Sync]
-    E --> G[Voice Intercom]
-
-    B --> H[Behavioral Intelligence]
-    H --> I[Contextual Coaching]
-    H --> J[Glucose Twins]
-
-    B --> K[Provider Bridge]
-    K --> L[Executive Summary]
-    K --> M[Triage Portal]
+    subgraph "Data Layer"
+        C -->|User & Health Data| G[(NoSQL / SQL Database)]
+        C -->|Media Storage| H[File Storage / S3]
+        G -->|Model Training| D
+    end
 ```
 
 ---
 
-## ⚖️ License
-Licensed under the Apache License 2.0.
+## 💡 The Problem & Solution
+* **The Problem:** Diabetes care is currently reactive and fragmented. Patients experience "alert fatigue" from reactive alarms, and manual logging leads to burnout.
+* **The Solution:** Dia-Pilot predicts glucose risks before they occur, automates data collection via AI Vision and Speech, and delivers decision-ready insights to clinicians.
 
-This project is open-source to encourage ethical, scalable adoption in public healthcare systems.
+---
 
+## ✨ Key Features
+* **🔮 Predictive Intelligence:** Glycemic forecasting and early hypoglycemia detection.
+* **⚡ Frictionless Input:** Food photo logging and voice-based health updates.
+* **🏥 Clinician Enablement:** One-page executive health summaries and risk-based triaging.
+* **🧭 Behavioral Intelligence:** Context-aware nudges and metabolic peer matching.
+
+---
+
+## 👩‍💻 Team
+* **[Nitya Gosain](https://github.com/Nitya-003)** — Full Stack Web Developer (MERN, Blockchain)
+* **[Saksham Goel](https://github.com/Saksham-official)** — AI/ML Engineer & Python Web Developer
+* **[Arshiya Kapoor](https://github.com/arshiya999)** — AI/ML Engineer & Python Web Developer
+
+---
+
+## 📜 License
+This project is licensed under the **Apache 2.0 License** — suitable for open innovation and public health deployment.
+
+---
+
+## _Built with ❤️ to redefine diabetes care._
