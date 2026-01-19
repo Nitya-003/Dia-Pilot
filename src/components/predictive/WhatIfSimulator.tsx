@@ -3,7 +3,12 @@ import Card from '../ui/Card';
 import Button from '../ui/Button';
 import LineChart from '../charts/LineChart';
 import { Zap } from 'lucide-react';
-import { simulatedScenarios } from '../../data/mockData';
+
+const simulatedScenarios = {
+  baseline: [{ time: '0', value: 98 }, { time: '+1h', value: 100 }, { time: '+2h', value: 98 }],
+  withMeal: [{ time: '0', value: 98 }, { time: '+1h', value: 145 }, { time: '+2h', value: 125 }],
+  withExercise: [{ time: '0', value: 98 }, { time: '+30m', value: 85 }, { time: '+1h', value: 92 }]
+};
 
 export default function WhatIfSimulator() {
   const [carbs, setCarbs] = useState(45);

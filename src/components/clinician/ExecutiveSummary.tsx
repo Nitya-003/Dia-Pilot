@@ -3,7 +3,8 @@ import Badge from '../ui/Badge';
 import LineChart from '../charts/LineChart';
 import { FileText, Download } from 'lucide-react';
 import Button from '../ui/Button';
-import { glucoseData } from '../../data/mockData';
+
+const glucoseData = [{ time: 'Mon', value: 105 }, { time: 'Tue', value: 110 }, { time: 'Wed', value: 98 }];
 
 export default function ExecutiveSummary() {
   return (
