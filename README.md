@@ -54,7 +54,7 @@ graph TD
 ---
 
 ## License
-This project is licensed under the **Apache 2.0 License** — suitable for open innovation and public health deployment.
+This project is licensed under the **[Apache 2.0 License](LICENSE)** — suitable for open innovation and public health deployment.
 
 ---
 
