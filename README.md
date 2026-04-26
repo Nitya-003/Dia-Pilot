@@ -47,14 +47,14 @@ graph TD
 ---
 
 ## Team
-* **[Nitya Gosain](https://github.com/Nitya-003)** — Full Stack Web Developer (MERN, Blockchain)
-* **[Saksham Goel](https://github.com/Saksham-official)** — AI/ML Engineer & Python Web Developer
-* **[Arshiya Kapoor](https://github.com/arshiya999)** — AI/ML Engineer & Python Web Developer
+* **[Nitya Gosain](https://github.com/Nitya-003)** : Full Stack Web Developer (MERN, Blockchain)
+* **[Saksham Goel](https://github.com/Saksham-official)** : AI/ML Engineer & Python Web Developer
+* **[Arshiya Kapoor](https://github.com/arshiya999)** : AI/ML Engineer & Python Web Developer
 
 ---
 
 ## License
-This project is licensed under the **[Apache 2.0 License](LICENSE)** — suitable for open innovation and public health deployment.
+This project is licensed under the **[Apache 2.0 License](LICENSE)**  suitable for open innovation and public health deployment.
 
 ---
 
